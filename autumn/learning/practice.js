@@ -22,3 +22,12 @@ if(istrue){
 }else{
     document.getElementById("example").textContent = "false";
 }
+
+var num = 10; // 変数の代入
+
+console.log( num );
+console.log( num += 3 ); //3を加算して代入
+console.log( num -= 3 ); //3を減算して代入
+console.log( num *= 2 ); //2を乗算して代入
+console.log( num /= 4 ); //4を除算して代入
+console.log( num %= 2 ); //2で割った余りを代入

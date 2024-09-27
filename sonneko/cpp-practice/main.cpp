@@ -1,13 +1,22 @@
 #include <iostream>
-#include "game.hpp"
 using namespace std;
 
 namespace game {
-    namespace character {
-        class Skill {
-        public:
-            string name  = "";
-            
+    class Skill {
+        string name  = "";
+        string type = "";
+        int damegeAmount;
+        int mpConsump;
+        public: 
+            Skill(string inName, string inType, string inOther) {
+                name = inName;
+                type = inType;
+                if (type == "attack-physical") {
+
+                } else if (type == "attack-magic") {
+
+                } else if (type == "")
+            }
     }
 
     class InitCharacter {
@@ -16,13 +25,22 @@ namespace game {
             string id = "";
             int maxHp;
             int maxMp;
-            int Character(string inName, string inId, int inMaxHp, int inMaxMp) {
+            Skill skill; 
+            CharacterData(string inName, string inId, int inMaxHp, int inMaxMp, Skill inSkill) {
                 name = inName;
                 id = inId;
                 maxHp = inMaxHp;
                 maxMp = inMaxMp;
+                skill = inSkill;
             }
     }
+
+    namespace character {
+        const InitCharacter[] characterData = {
+            CharacterData("キャラ1", "test1", 50, 50),
+            CharacterData("キャラ2", "test2", 70, 70),
+            CharacterData("キャラ3", "test3", 80, 80)
+        }
     }
 }
 
@@ -34,5 +52,5 @@ class Character {
     string name = "";
     int hp = 0;
     int mp = 0;
-    int 
+     
 }

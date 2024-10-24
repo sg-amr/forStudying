@@ -5,9 +5,18 @@ import java.io.*;
 class Player{
     public Mp mp;
     public Hp hp;
-    
-    public static void Player() {
+    private String name;
 
+    public static void Player() {
+           
+    }
+
+    public void setName(String inName) {
+        this.name = inName;
+    }
+
+    public String getName() {
+        return this.name;
     }
     
 }
